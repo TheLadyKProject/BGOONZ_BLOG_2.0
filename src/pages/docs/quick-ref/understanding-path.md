@@ -10,11 +10,14 @@ seo:
 template: docs
 ---
 
+
 ### Understanding PATH
 
-![](images/pypath.jpeg)
 
-![](images/pypath2.PNG)
+![image](images/pypath.jpeg)
+
+
+![image](images/pypath2.png)
 
 When you run a command like python or pip, your operating system searches through a list of directories to find an executable file with that name. This list of directories lives in an environment variable called PATH, with each directory in the list separated by a colon:
 
@@ -29,7 +32,7 @@ Through a process called rehashing, pyenv maintains shims in that directory to m
 Shims are lightweight executables that simply pass your command along to pyenv. So with pyenv installed, when you run, say, pip, your operating system will do the following:
 
 - Search your PATH for an executable file named pip
-- 
+-
 - Find the pyenv shim named pip at the beginning of your PATH
 
 - Run the shim named pip, which in turn passes the command along to pyenv
@@ -57,7 +60,7 @@ Each Python version is installed into its own directory under $(pyenv root)/vers
 For example, you might have these versions installed:
 
 - $(pyenv root)/versions/2.7.8/
-- 
+-
 - $(pyenv root)/versions/3.4.2/
 
 - $(pyenv root)/versions/pypy-2.4.0/
@@ -66,4 +69,7 @@ As far as Pyenv is concerned, version names are simply directories under $(pyenv
 
 ### Managing Virtual Environments
 
-There is a pyenv plugin named [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv) which comes with various features to help pyenv users to manage virtual environments created by virtualenv or Anaconda. Because the activate script of those virtual environments are relying on mutating $PATH variable of user's interactive shell, it will intercept pyenv's shim style command execution hooks. We'd recommend to install pyenv-virtualenv as well if you have some plan to play with those virtual environments.![](https://i.imgur.com/0hQBL4d.png)![](https://i.imgur.com/0hQBL4d.png)![](images/festive-zebra.png)
+There is a pyenv plugin named [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv) which comes with various features to help pyenv users to manage virtual environments created by virtualenv or Anaconda. Because the activate script of those virtual environments are relying on mutating $PATH variable of user's interactive shell, it will intercept pyenv's shim style command execution hooks. We'd recommend to install pyenv-virtualenv as well if you have some plan to play with those virtual environments.
+![image](https://i.imgur.com/0hQBL4d.png)
+![image](https://i.imgur.com/0hQBL4d.png)
+![image](images/festive-zebra.png)

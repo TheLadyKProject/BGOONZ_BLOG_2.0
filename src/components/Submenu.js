@@ -1,7 +1,9 @@
-import _ from 'lodash';
 import React from 'react';
+import _ from 'lodash';
+
 import { classNames } from '../utils';
 import ActionLink from './ActionLink';
+
 export default class Submenu extends React.Component {
     render() {
         let page = _.get(this.props, 'page', null);
@@ -16,7 +18,8 @@ export default class Submenu extends React.Component {
                             className={classNames('menu-item', {
                                 current: page_url === action_url,
                                 'menu-button': _.get(action, 'style', null) !== 'link'
-                            })} >
+                            })}
+                        >
                             <ActionLink {...this.props} action={action} />
                         </li>
                     );
